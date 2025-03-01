@@ -1,6 +1,5 @@
 import React from "react";
 import Aurora from "./Aurora.jsx";
-import GradientText from "./Gradient.jsx";
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 function App() {
@@ -55,22 +54,11 @@ function App() {
       </div>
       <section
         className="relative z-10 h-[100vh] w-[100vw] p-0 m-0 overflow-hidden flex justify-center
-      items-center flex-col"
+      items-center flex-col font-rethinkSans"
       >
-        <h1 className="text-white text-[32px] lg:text-[56px] font-rethinkSans flex gap-3">
-          <span className=" font-[700] italic">GSAP</span>
-          <GradientText
-            colors={["#71706C", "#FFFFFF", "#858584", "#FFFFFF", "#858584"]}
-            animationSpeed={3}
-            showBorder={false}
-            className="font-[200]"
-          >
-            SVG animation
-          </GradientText>
-        </h1>
         <div
           ref={stringRef}
-          className="h-[200px] flex justify-center items-center w-[100vw]"
+          className="h-[200px] flex justify-center items-center w-[100vw] flex-col"
         >
           <svg
             className="w-[80vw] h-auto"
@@ -80,6 +68,31 @@ function App() {
           >
             <path d={path} stroke="white" stroke-width="1" fill="transparent" />
           </svg>
+        </div>
+        <div className="flex flex-col gap-8 ">
+        <div className="flex flex-col md:flex-row w-[80vw] gap-16 ">
+          <div className="md:w-1/2 flex md:justify-end ">
+            <h1 className="text-white">Smart Development</h1>
+          </div>
+          <div className="md:w-1/2">
+            <p className="text-white text-[24px] leading-[120%]">
+            Combining unique design and rich technology, we build digital products exactly as they were designed, without shortcuts or simplifications.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row  w-[80vw] gap-16">
+          <div className="md:w-1/2 flex md:justify-end">
+            <h1 className="text-white">Areas</h1>
+          </div>
+          <div className="md:w-1/2  text-white flex flex-wrap text-[18px] gap-2 pb-[40px] md:pb-0">
+          <div className="border-[1px] p-[4px] px-[12px] rounded-3xl hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">E-COMMERCE</div>
+          <div  className="border-[1px] p-[4px] px-[12px] rounded-3xl hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">FINANCE</div>
+          <div  className="border-[1px] p-[4px] px-[12px] rounded-3xl hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">EDUCATION</div>
+          <div  className="border-[1px] p-[4px] px-[12px] rounded-3xl hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">SOCIAL</div>
+          <div  className="border-[1px] p-[4px] px-[12px] rounded-3xl hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">ENTERTAINMENT</div>
+          <div  className="border-[1px] p-[4px] px-[12px] rounded-3xl hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">MEDICINE</div>
+          </div>
+        </div>
         </div>
       </section>
     </main>
